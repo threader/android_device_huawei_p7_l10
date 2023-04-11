@@ -1,5 +1,7 @@
 include device/huawei/hi6620oem-common/BoardConfigCommon.mk
-
+TARGET_KERNEL_CONFIG := hisi_hi6620oem_defconfig
+TARGET_KERNEL_SOURCE := kernel/hwp6s-kernel
+#TARGET_KERNEL_SOURCE := kernel/linux-3.0.101-hwp
 TARGET_BOOTLOADER_BOARD_NAME := P7-L10
 
 # Bluetooth
@@ -15,6 +17,7 @@ TARGET_OTA_ASSERT_DEVICE := hwp7,hwp7-l10,P7-L10
 DEVICE_RESOLUTION := 1080x1920
 TW_HAS_EXTERNAL := true
 TW_NO_USB_STORAGE := false
+TW_INCLUDE_CRYPTO := true
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
